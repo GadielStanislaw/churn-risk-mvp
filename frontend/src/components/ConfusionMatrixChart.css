@@ -1,0 +1,54 @@
+.confusion-matrix {
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  .confusion-matrix {
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+  }
+}
+
+.confusion-matrix__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+}
+
+.confusion-matrix__grid {
+  display: grid;
+  grid-template-columns: 110px 1fr 1fr;
+  gap: 4px;
+}
+
+.confusion-matrix__col-header,
+.confusion-matrix__row-header {
+  font-size: 11px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+}
+
+.confusion-matrix__row-header {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.confusion-matrix__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  min-height: 72px;
+}
+
+.confusion-matrix__value {
+  font-size: 20px;
+  font-weight: 600;
+}

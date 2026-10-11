@@ -1,0 +1,61 @@
+.feature-chart {
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --track-bg: #e1e0d9;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  .feature-chart {
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --track-bg: #2c2c2a;
+  }
+}
+
+.feature-chart__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+}
+
+.feature-chart__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-chart__row {
+  display: grid;
+  grid-template-columns: 160px 1fr 48px;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-chart__label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.feature-chart__track {
+  height: 16px;
+  background: var(--track-bg);
+  border-radius: 0 4px 4px 0;
+}
+
+.feature-chart__bar {
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  transition: width 0.3s ease;
+}
+
+.feature-chart__value {
+  font-size: 12px;
+  color: var(--text-primary);
+  text-align: right;
+}

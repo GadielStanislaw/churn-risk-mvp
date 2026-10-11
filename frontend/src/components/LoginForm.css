@@ -1,0 +1,74 @@
+.login-form {
+  max-width: 320px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #0b0b0b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .login-form {
+    color: #ffffff;
+  }
+}
+
+.login-form h1 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: #52514e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .login-form label {
+    color: #c3c2b7;
+  }
+}
+
+.login-form input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #c3c2b7;
+  font-size: 14px;
+  background: #fcfcfb;
+  color: #0b0b0b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .login-form input {
+    background: #1a1a19;
+    color: #ffffff;
+    border-color: #383835;
+  }
+}
+
+.login-form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #2a78d6;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-form__error {
+  color: #d03b3b;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}

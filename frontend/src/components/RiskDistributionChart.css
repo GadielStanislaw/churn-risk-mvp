@@ -1,0 +1,57 @@
+.risk-dist {
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --track-bg: #e1e0d9;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  .risk-dist {
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --track-bg: #2c2c2a;
+  }
+}
+
+.risk-dist__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+}
+
+.risk-dist__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.risk-dist__row {
+  display: grid;
+  grid-template-columns: 90px 1fr 48px;
+  align-items: center;
+  gap: 10px;
+}
+
+.risk-dist__label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.risk-dist__track {
+  height: 20px;
+  background: var(--track-bg);
+  border-radius: 0 4px 4px 0;
+}
+
+.risk-dist__bar {
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  transition: width 0.3s ease;
+}
+
+.risk-dist__value {
+  font-size: 13px;
+  color: var(--text-primary);
+  text-align: right;
+}

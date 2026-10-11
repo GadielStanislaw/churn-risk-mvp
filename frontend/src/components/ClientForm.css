@@ -1,0 +1,60 @@
+.client-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.client-form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.client-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: #52514e;
+}
+
+.client-form select,
+.client-form input {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #c3c2b7;
+  font-size: 14px;
+  background: #fcfcfb;
+  color: #0b0b0b;
+}
+
+.client-form button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #2a78d6;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.client-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (prefers-color-scheme: dark) {
+  .client-form label {
+    color: #c3c2b7;
+  }
+
+  .client-form select,
+  .client-form input {
+    background: #1a1a19;
+    color: #ffffff;
+    border-color: #383835;
+  }
+}
